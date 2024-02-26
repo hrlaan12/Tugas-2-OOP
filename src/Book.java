@@ -1,21 +1,20 @@
-// Kelas Buku
 class Buku {
-    // Atribut
-    private String penulis;
-    private String judul;
-    private int harga;
-    private int nomorPenerbit;
+    String author;
+    String title;
+    int price;
+    int publisher_number;
+    int total_price;
 
-    // Konstruktor
-    public Buku(String penulis, String judul, int harga, int nomorPenerbit) {
-        this.penulis = penulis;
-        this.judul = judul;
-        this.harga = harga;
-        this.nomorPenerbit = nomorPenerbit;
+    public Buku(String author, String title, int price, int publisher_number){
+        this.author = author;
+        this.title = title;
+        this.price = price;
+        this.publisher_number = publisher_number;
     }
 
-    // Getter untuk mendapatkan harga buku
-    public int getHarga() {
-        return harga;
+    public int bayarBuku(int numberOfBooks){
+        this.total_price = numberOfBooks * price;
+        System.out.println("Membeli Buku " + title + " Sebanyak " + numberOfBooks);
+        return total_price;
     }
 }
